@@ -1,0 +1,133 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+OBJETO
+classe = abstração do corpo do objeto
+atributo = dados/estado do objeto
+metodo = acao/comportamento do objeto
+objeto é a representacao da classe
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+METODOS
+
+procedimentos
+void () = nao retorna valor
+void (parametro) = entra com argumento/ parametro , sem retorno
+função
+variavel função()= retorna um valor com a variavel especificada
+variavel função(parametro)= retorna um valor com parametro passado
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+MODELO DE MEMORIA
+
+Stack e Heap
+variavel primitiva = Stack
+Objeto = Heap
+referencia do objeto = Stack
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+ESCOPO
+
+- onde a variavel é valida(funciona)
+
+escopo da classe 
+escopo do metodo
+escopo do bloco
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+VARIAVEIS
+String , byte, short, int, long, float, double, char e boolean.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+SAIDAS
+
+joption pane
+import javax.swing.JOptionpane
+dados precisam ser convertidos :
+Integer.ParseFloat()
+Float.ParseInt()
+
+Scanner
+variavel = objeto.nextInt()
+variavel = objeto.nextFloat()
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CONSTRUTORES
+
+- construtores com parametro
+- sem parametro 
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+METODO
+
+- pode retornar um objeto
+- sobrecar é a criação de mais metodos com o mesmo nome mais com procedimentos diferentes
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+VISIBILIDADE
+
++ public = pode ser acessado por todas as classe
+# protected = pode ser acessado pela classe e subclasse
+- private = somente a classe pode acessar a variavel
+" " default = pode ser acessado por classe do mesmo pacote
+
+METODO DE ACESSO
+
+- como se acessa a variavel public ou private
+
+- set é para trocar a variavel privado 
+- get para acessar a variavel privado
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HERANÇA
+
+- uma classe que herda os atributos e metodos de outra classe
+- classe que sera modelo se chama superclasse
+- classe que herda sera uma subclasse
+
+- sobreposição = metodo sobrepoe o metodo da superclasse.
+- extensão = acrescimo de atributo ao metodo
+
+- herança multipla , uma classe herda de duas ou mais classes
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+CLASSE , METODOS ABSTRATAS E CONCRETAS
+
+CLASSE ABSTRATA
+- representa a parte abstrato de um objeto 
+- nao é instanciada
+- Superclasses , pois é o molde abstrato de outros objetos
+- no UMl é em italico
+
+METODO ABSTRATO
+- sera reescrito na classe filhas concreta
+- normalmente nao tem nada
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+INTERFACE
+- classe abstrata pura , nao contem atributos apenas constantes
+- os metodos , sao public ou abstract 
+- metodos sao declarados mais nao definidos
+- os atributos sao public , static e final
+- aplicação : public interface nomeInterface
+- todos os metodos sao abstratos , nao necessario a palavra
+- public class nomeClasse implements nomeInterface
+- nao esta na hierarquia de classes
+- UMA REGRA PARA A CLASSE 
+- DEFINE METODOS QUE UMA OU MAIS CLASSE IRAO USAR SEM FAZER O INTERCAMBIO DE HERANÇA
+- MODO DE ACRESCENTAR MAIS CARACTERISTICAS A CLASSE
+- Use interfaces quando você quiser definir uma regra que todas as classes que implementem
+a interface devem seguir, independentemente se pertencem a alguma hierarquia de classes
+ou não.
+- Use classes abstratas quando você quiser definir um “template” para subclasses e você
+possui alguma implementação (métodos concretos) que todas as subclasses podem utilizar.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+POLIMORFISMO
+
+- metodos sao executados de diferentes maneiras de sua herdeira
+- classe quando herda o metodo da classe abstrato ela altera sua funcao se sobrepondo
+- quando substituimos um metodo de uma superclasse na sua subclasse , usando a mesma assinatura
+ 
+
+
+
+
+
+
+
+
+
+CLASSE OBJECT
+
+- mae de todas as classe
+- .equals() , compara objetos
+- . toString() , retorna os valores do objeto
+
+

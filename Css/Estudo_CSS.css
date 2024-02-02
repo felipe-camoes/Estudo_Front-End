@@ -1,0 +1,709 @@
+/* Seletores */
+/* Imagem */
+.nome_da_classe{}               /* Classe generica, sera aplicada a qualquer tag que contenha a classe */
+#id{}                           /* Seletor id, sera aplicada a qualquer tag que contenha o id*/
+*{}                             /* Todas as tags serao afetada*/       
+tag{}                           /* Todas as tags especificadas serao afetada pelo estilo */
+tag1, tag2 , tag3{}             /* Tags na lista serao afetada pelo estilo */
+tag1 tag2{}                     /* Todas as tag2 contida na tag1 sera afetada pelo estilo , inclusive netos */
+tag1 > tag2{}                   /* Somente se a tag2 for filha direta da tag1 sera afetada pelo estilo*/
+tag1 + tag2{}                   /* Tag mais proxima especificada sera afetada pelo estilo */
+tag1 ~ tag2{}                   /* Todas as tag2 posterios a tag1 serao afetada pelo estilo */
+tag1.nome_da_classe{}           /* somente se a classe for chamada na tag1*/
+[atributo]{}                    /* Aplica o estilo ao elemento com o atributo especificado */
+[atributo=string]{}             /* Aplica o estilo ao elemento com o atributo que tenha a string exata */
+[atributo*=string]{}            /* Aplica o estilo ao elemento com o atributo que tenha uma parte da string */
+
+/* Pseudo classes , seleciona os elementos a partir da condição */
+
+:root{}                   /* Seleciona o elemento raiz do documento */ 
+elemento:hover{}          /* Seleciona um elemento quando o cursor do mouse está sobre ele */
+elemento:active{}         /* Seleciona um elemento quando ele está sendo clicado ou pressionado */
+elemento:focus{}          /* Seleciona um elemento quando ele está em foco  */
+elemento:visited{}        /* Seleciona um elemento quando foi visitado */
+elemento:first-child{}    /* Seleciona o primeiro filho de um elemento pai */
+elemento:last-child{}     /* Seleciona o último filho de um elemento pai */
+elemento:nth-child(n){}   /* Seleciona o enésimo filho de um elemento pai */
+elemento:nth-of-type(n){} /* Seleciona o enésimo elemento de um tipo específico dentro do elemento pai */
+elemento:first-of-type{}  /* Seleciona o primeiro elemento de um tipo específico dentro de seu elemento pai */
+elemento:last-of-type{}   /* Seleciona o último elemento de um tipo específico dentro de seu elemento pai */
+elemento:only-of-type{}   /* Seleciona um elemento que é o único elemento de seu tipo dentro de seu elemento pai */
+elemento:not(selector){}  /* Seleciona um elemento que não corresponde ao seletor especificado */
+elemento:checked{}        /* Seleciona elementos de entrada que estão marcados */
+elemento:empty{}          /* Seleciona elementos que não têm conteúdo dentro deles */
+elemento:target{}         /* Seleciona o elemento que é o alvo da âncora atual */
+
+/* Pseudo elemento , adiciona estilo e conteudo a parte especifica de um elemento */
+
+elemento::before{}         /* Insere conteúdo antes do elemento selecionado */
+elemento::after{}          /* Insere conteúdo depois do elemento selecionado */
+elemento::first-letter{}   /* Seleciona a primeira letra de um bloco de texto */
+elemento::first-line{}     /* Seleciona a primeira linha de um bloco de texto */
+elemento::selection{}      /* Seleciona o texto que foi destacado pelo usuário */
+elemento::placeholder{}    /* Seleciona o texto de um campo de entrada que ainda não foi preenchido */
+elemento::marker{}         /* Seleciona o marcador de lista de um elemento de lista */
+elemento::backdrop{}       /* Seleciona a área atrás de um modal aberto ou uma caixa de diálogo */
+video::cue{}               /* Seleciona elementos de áudio e vídeo que indicam a necessidade de interação do usuário */
+elemento::spelling-error{} /* Seleciona texto com erro ortográfico */
+
+/* Estilos */
+
+abbr{
+    /* Display */
+
+    display: block; /* Define como o elemento é disponibilizado na pagina */
+
+    /* Flex */
+
+    flex-direction: column; /* Define a direção dos elementos no container flex */	
+    flex-wrap: wrap; /* Define a "quebra" dos elementos quando ultrapassa o limite do container */
+    flex-flow: column nowrap; /* Shorthand (wrap , direction) */
+    justify-content: space-between; /* Define o alinhamento dos elementos em relação ao eixo horizontal */	
+    align-items: center; /* Define o alinhamento dos elementos em relação ao eixo vertical */
+    align-content: stretch; /* Define o alinhamento do conteudo em relação ao eixo vertical */
+
+    flex: 2 1 1px; /* Shorthand (flex-grow , flex-shrink , flex-basis) */	
+    flex-grow: 2; /* Define a proporção do item-flex no container */ 	
+    flex-shrink: 1; /* Define a proporção do item-flex em ralação aos outros elementos */ 
+    flex-basis: 1px; /* Define um tamanho inicial para o item antes que o container seje distribuido  */ 	
+    
+    order: -1; /* Define a ordem do item-flex no container */	
+    align-self: flex-end; /* Define a posiçao do item-flex sobre o container  */	
+
+    /* Grid */
+
+    grid-template-columns: 20px 20px 20px 20px ; /* Define a quantidade de colunas */
+    grid-template-rows: 20px 20px 20px 20px ; /* Define a quantidade de linhas */
+    column-gap: 1px; /* Define o espaçamento das colunas */
+    row-gap: 1px; /* Define o espaçamento das linhas */
+    gap: 1px; /* Define o espaçamento da linha e da coluna */
+    justify-content: space-between; /* Define o alinhamento dos elementos em relação ao eixo horizontal */	
+    align-items: center; /* Define o alinhamento dos elementos em relação ao eixo vertical */
+    align-content: stretch; /* Define o alinhamento do conteudo em relação ao eixo vertical */
+
+    grid-column: 1 / span 3; /* Define quantos blocos de linha ou coluna o item ira ocupar*/
+    grid-area: 1 / 2 / 3 / 4; /* Define quantos blocos de linha e coluna o item ira ocupar*/
+    grid-template-areas: nome nome linguagem; /* Define quantos blocos de linha ou coluna a string do item ira ocupar */
+
+    /* Elementos flutuantes */
+
+    position: relative; /* Define a posição do elemento em relação a pagina ou elemento , relative o elemento continua no bloco , o absolute o elemento sai do bloco */
+    top: 1px ; /* Define a posição em relação ao topo */	
+    right: 1px ; /* Define a posição em relação a direita  */
+    bottom: 1px ; /* Define a posição em relação ao fundo */	
+    left: 1px ;	/* Define a posição em relação a esquerda */
+    z-index	: 1; /* Define o indice do elemento */
+    clear: both; /* Denifi se o elemento pode ter elementos flutuantes ao lado */
+    float: left; /* Define a posição de um elemento flutuante */
+   
+    /* Box model */
+
+    height: 1px; /* Defina a altura do elemento */	
+    width: 1px; /* Defina a largura do elemento */
+    max-height: 1px; /* Define a altura maximo do elemento */	
+    max-width: 1px; /* Define a largura maxima do elemento */ 
+    min-height:	1px; /* Define a altura minima do elemento */
+    min-width:	1px; /* Define a largura minima do elemento */
+
+    width: max-content; /* Define medidas a partir do conteudo total */ 
+    height: min-content; /* Define medidas a partir do conteudo minimo */
+
+    margin: 1px 1px 1px 1px; /* Define a margen do elemento */
+    margin-top: 1px; /* Define a margen do topo */
+    margin-right : 1px; /* Define a margen da direita */
+    margin-bottom: 1px; /* Define a margen do fundo */
+    margin-left	: 1px ; /* Define a margen da esquerda */
+    	
+    outline: 1px solid var(--cor); /* Define linha fora do elemento , shorthand ( tamanho , estilo , cor ) */	
+    outline-color: var(--cor); /* Define a cor do outline */	
+    outline-offset: 1px; /* Define o espaço entre a borda e o outline */ 	
+    outline-style: solid; /* Define o estilo do outline */
+    outline-width: 1px; /* Define a largura do outline */	
+
+    border:	1px solid var(--cor); /* Define a borda do elemento , shorthand (tamnaho , estilo , cor ) */ 
+    border-top: 1px solid var(--cor); /* Define a borda do topo do elemento , shorthand (tamnaho , estilo , cor ) */
+    border-right: 1px solid var(--cor);	/* Define a borda direita do elemento , shorthand (tamnaho , estilo , cor ) */
+    border-bottom: 1px solid var(--cor); /* Define a borda do fundo do elemento , shorthand (tamnaho , estilo , cor ) */
+    border-left: 1px solid var(--cor); /* Define a borda esquerda do elemento , shorthand (tamnaho , estilo , cor ) */   
+
+    border-color: var(--cor) var(--cor) var(--cor) var(--cor); /* Define a cor da borda do elemento */
+    border-top-color: var(--cor); /* Define a cor da borda do do topo do elemento */ 
+    border-right-color: var(--cor);	/* Define a cor da borda direita do elemento */ 
+    border-bottom-color: var(--cor); /* Define a cor da borda do fundo do elemento */	
+    border-left-color: var(--cor); /* Define a cor da borda esquerda do elemento */ 
+
+    border-style: solid dashed solid solid;	/* Define o estilo do elemento */    
+    border-top-style: solid; /* Define o estilo do topo do elemento */    
+    border-right-style: solid; /* Define o estilo direito do elemento */    
+    border-bottom-style: solid; /* Define o estilo do fundo do elemento */    
+    border-left-style: solid; /* Define o estilo esquerdo do elemento */    
+
+    border-width: 1px 1px 1px 1px; /* Define o tamanho da borda do elemento */        
+    border-top-width: 1px; /* Define o tamanho da borda do fundo do elemento */   
+    border-right-width: 1px; /* Define o tamanho da borda direita do elemento */   
+    border-bottom-width: 1px; /* Define o tamanho da borda esquerda do elemento */   
+    border-left-width: 1px;	/* Define o tamanho da borda esquerda do elemento */   
+    
+    border-radius: 1px 1px 1px 1px; /* Define o raio da borda do elemento */   
+    border-top-right-radius: 1px; /* Define o raio do topo e da direita da borda do elemento */ 
+    border-top-left-radius: 1px; /* Define o raio do topo e da esquerda da borda do elemento */
+    border-bottom-left-radius: 1px; /* Define o raio do fundo e da esquerda do elemento */
+    border-bottom-right-radius: 1px; /* Define o raio do fundo e da direita do elemento */
+  
+    border-image: url("Imagens/1.png") 20 1% 1px round; /* Shorthand (image-source , image-slice , image-width , image-outset , image-repeat) */
+    border-image-source: url("Imagens/1.png"); /* Busca a url da Imagem */
+    border-image-slice: 20; /* Define em quantas vezes a Imagens serao dividida */
+    border-image-width: 1%; /* Define o tamanho da Imagem da borda */
+    border-image-outset: 1px; /* Define como a Imagem ira se comportar em ralação a borda do elemento */
+    border-image-repeat: round; /* Define como a Imagem ira se repetir */
+    
+    border-spacing: 0px; /* Defina o espaço entre as bordas da tabela */
+    border-collapse: collapse; /* Define como a borda de um elemento ira se comportar em ralação a borda da tabela */
+
+    background: var(--cor) no-repeat; /* Define o plano de fundo do elemento */	
+    background-attachment: scroll; /* Define se a Imagem do plano de fundo deve ser fixa ou rolar */
+    background-color: var(--cor); /* Define a cor do plano de fundo do elemento */
+    background-image: url("Imagens/1.png");	/* Define o plano de fundo do elemento como Imagem */
+    background-position: right top;	/* Define a origen da Imagem no plano de fundo */
+    background-repeat: no-repeat; /* Define a repétição da Imagem no plano de fundo */
+    background-size: 30px 10px;	/* Define o tamanho da Imagem do plano de fundo */
+
+    background-image: linear-gradient(var(--cor) , var(--cor) , var(--cor));
+    background-image: repeating-linear-gradient(var(--cor) , var(--cor) , var(--cor));
+    background-image: radial-gradient(var(--cor) , var(--cor) , var(--cor));
+    background-image: repeating-radial-gradient(var(--cor) , var(--cor) , var(--cor));
+    background-image: conic-gradient(var(--cor) , var(--cor) , var(--cor));
+    background-image: repeating-conic-gradient(var(--cor) , var(--cor) , var(--cor));
+    
+    opacity:1; /* Define a transparencia do elemento */ 
+
+    padding: 1px 1px 1px 1px; /* Define o preenchimento do elemento */       
+    padding-top: 1px; /* Define o preenchimento do topo */
+    padding-right: 1px; /* Define o preenchimento da direita */
+    padding-bottom: 1px; /* Define o preenchimento do fundo */	
+    padding-left: 1px; /* Define o preenchimento da esquerda */
+
+    /* Conteudo */
+
+    text-align: start; /* Define o alinhamento horizontal do texto no elemento  */
+    text-align-last: end; /* Define o alinhamento da ultima linha do texto no elemento */	
+    text-decoration: underline;	/* Define a decoraçao do texto */
+    text-decoration-color: var(--cor); /* Define a cor da decoração */	
+    text-decoration-line: overline;	/* Define a linha do texto , tipos (underline , overline)  */
+    text-decoration-style: 	wavy ; /* Define o estilo da decoração do texto */
+    text-indent: 1px; /* Define o espaçamento da primeira linha em ralação a margen */
+    text-overflow: clip; /* Define como o texto ira ficar quando tiver um overflow */
+    text-shadow: 1px 1px var(--cor); /* Define a sombra do texto */
+    text-transform:	uppercase; /* Define o tipo do texto , tipos ( uppercase , lowercase ) */
+    color: var(--cor); /* Define a cor do texto */
+    line-height: 1px; /* Define a altura das linhas do texto */
+    word-spacing: 1px; /* Define o espaçamento das palavras */
+    letter-spacing: 1px; /* Define o espaçamento das letras */
+    word-break: normal; /* Define como o texto ira quebrar quando chegar na ponta do elemento */
+    white-space: nowrap; /* Define como o texto ira "quebrar" em relação ao elemento */
+    tab-size: 1px;	/* Define o tamanho do tab */
+    writing-mode: vertical-lr; /* Define a direção do texto*/
+
+    font: Arial 20px 150% italic small-caps bold; /* Shorthand (family , size , stretch , style , variant , weight , height) */
+    font-family: Arial; /* Define a familia da fonte  */
+    font-size: 20px; /* Define o tamanho da fonte */
+    font-stretch:  150%; /* Define uma ampliação do texto */
+    font-style: italic ; /* Define o estilo da fonte */
+    font-variant: small-caps ; /* Define a variação da fonte , o texto depende de como foi digitado no elemento */
+    font-weight: bold; /* Define o peso da fonte */
+
+    /* Medidas */
+
+    font-size: 1px; /* Define o tamanho da fonte em pixel */
+    font-size: 1%; /* Define o tamanho da fonte em porcentagem em relação ao pai */
+    font-size: 1rem; /* Define o tamanho da fonte em relação ao tamanhao da fonte raiz */
+    font-size: 1em; /* Define o tamanho da fonte em relação ao tamanhao da fonte do pai */
+    font-size: 1vh; /* Define o tamanho da fonte em relação ao tamanhao da altura da viewport */
+    font-size: 1vw; /* Define o tamanho da fonte em relação ao tamanhao da largura da viewport */
+    font-size: 1pt; /* Define o tamanho da fonte em relação a polega , euqivale 1/72 avos de polegada */
+    font-size: 1pc; /* Define o tamanho da fonte em realação a polegada , 1pt equivale 12pt */
+    font-size: 1cm; /* Define o tamanho da fonte em centimentro */
+    font-size: 1mm; /* Define o tamanho da fonte em milimetro */
+
+    list-style: circle inside url("Imagens/1.png"); /* Define os estilos da lista , shorthand (type , position , image ) */
+    list-style-image: url("Imagens/1.png"); /* Define uma Imagem como estilo da lista */
+    list-style-position: inside; /* Define se o estilo da lista estara dentro da lista */
+    list-style-type: circle; /* Define o tipo estilo da lista  */
+
+    overflow: hidden; /* Define como o conteudo ira sobrepor o elemento */	
+    overflow-x: scroll; /* Define como o conteudo ira sobrepor o elemento horizontalmente */	
+    overflow-y: hidden; /* Define como o conteudo ira sobrepor o elemento verticalmente */
+
+    column-count: 3; /* Define quantas colunas tera no conteudo , quebrando o texto */	
+    column-width: 1px; /* Define a largura dos blocos de texto */	   
+    columns: 1px 3; /* Shorthand ( column-width , column-count ) */       
+    column-fill: auto; /* Define como o conteudo ira se preencher entre as colunas */	      
+    column-gap:1px; /* Define o espaçamento entre os blocos de textos */	  
+    column-rule: 1px solid var(--cor); /* Shorthand formato (rule-width , rule-style , rule-color ) */         	
+    column-rule-width: 1px; /* Define a largura da "coluna" */
+    column-rule-style: solid; /* Define o estilo da "coluna" entre os textos */
+    column-rule-color: var(--cor); /* Define a cor do estilo definido */
+        
+    /* animaçoes  */
+
+    animation: nome infinite ease-in 1s 1 initial forwards paused; /* Shorthand (name , duration , timing-function , delay , iteration-count , direction , fill-mode , play-state )  */	
+    animation-name: nome; /* Define qual animação sera executada */
+    animation-duration: infinite; /* Define a duração da animação */
+    animation-timing-function: ease-in; /* Define como uma animação deve ser acelerada durante sua execução. */
+    animation-delay: 1s; /* Define o tempo que a animação começara */
+    animation-iteration-count: 1; /* Define quantas vezes a animação ira executar */
+    animation-direction: initial; /* Define a origem da animação */
+    animation-fill-mode: forwards; /* Define como o elemento ira ficar depois da animação */
+    animation-play-state: paused; /* Define se a animação deve ser pausada ou continuada */	
+    
+    transform: scale(1deg); /* Define como o elemeto ira se tranformar , modificando a scala , rotação , matriz e etc   */	
+    transform-origin: top left; /* Define a posiçao de onde a transformaçao sera*/	
+    transform-style:preserve-3d; /* Define se o efeito ira trasnpor o elemento pai */	
+   
+    perspective: 1px; /* Define a pertpectiva do elemento em relação ao elemento */ 
+    perspective-origin: center; /* Define a origem da perspectiva em relação aos filhos */
+   
+    transition: height 1s ease-in 1px; /* Shorthand ( property , duration , timing-function , delay)  */	
+    transition-property: height; /* Define qual propriedade ira ser animada */	
+    transition-duration: 1s; /* Define a duração da animação */	
+    transition-timing-function: ease-in; /* Define a velocidade como a animação ira executar nos intervalos*/
+    transition-delay: 1s; /* Define o tempo que a animação ira começar a ser executada */
+
+    /*  Outros */
+
+    box-shadow: 1px 1px var(--cor); /* Define o sombreamento da caixa */ 
+    box-sizing: border-box; /* Define como sera o box-model , se o preenchimento e a borda , serao somados ao tamanho total do elemento  */ 
+    visibility: hidden; /* Define se o elemento ira ficar visivel , o elemento continua na posiçao */
+    direction: rtl; /* Define a direção do conteudo no elemento */
+    cursor: pointer; /* Define o tipo de cursor ao passar pelo elemento */
+    resize: horizontal; /* Define um bloco no elemento onde o usario podera editar o tamanho  */	
+    caption-side: bottom; /* Define em que posição ira ficar o titulo da tabela , tipos ( bottom , top ) */	
+    table-layout: auto; /* Define como sera o tamanho do layout da tabela */
+    empty-cells: show; /* Define como a borda e o plano de fundo ira ser exibido caso o conteudo da tabela seje vazio */
+    vertical-align: center; /* Define o alinhamento do conteudo na vertical */
+    content: "conteudo"; /* Define um conteudo antes ou depois do conteudo principal */	
+    quotes: "+" "+"; /* Coloca uma citação na tag quote */
+    counter-increment: count 1;	/* Incrementa no content um valor contado */
+    counter-reset: count 1;	/* Cria o contador */
+    scroll-behavior: smooth; /* Define como o scroll ira se comportar com a interação do usuario*/
+}
+
+/* Estilos aplicados */
+
+.inline {
+    display: inline;
+    border: 2px solid black;
+}
+
+.block {
+    display: block;
+    border: 2px solid black;
+}
+
+.inline-block {
+    display: inline-block;
+    width: 200px;
+    border: 2px solid black;
+}
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+    height: 100px;
+    border: 2px solid black;
+}
+
+.item-flex {
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+}
+
+.if-1 {
+    order: 2;
+    flex-grow: 2;
+    flex-basis: 100px;
+    align-self: flex-end;
+}
+
+.relative {
+    display: inline-block;
+    width: 80vw;
+    height: 100px;
+    border: 2px solid black;
+}
+
+.item-r {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+}
+
+.ir-1 {
+    position: relative;
+    top: 60px;
+    bottom: 100px;
+    left: 400px;
+    right: 10px;
+}
+
+.absolute {
+    display: inline-block;
+    width: 80vw;
+    height: 100px;
+    border: 2px solid black;
+}
+
+.item-a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+}
+
+.ia-1 {
+    position: absolute;
+    top: 400px;
+    bottom: 100px;
+    left: 400px;
+    right: 10px;
+}
+
+.float {
+    display: inline-block;
+    width: 80vw;
+    height: 100px;
+    border: 2px solid black;
+}
+
+.ift-1 {
+    float: right;
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+}
+
+.ift-2 {
+    float: left;
+    width: 30px;
+    height: 30px;
+    border: 2px solid black;
+}
+
+.ift-3 {
+    clear: both;
+}
+
+.box-1 {
+    width: 90vw;
+    min-width: 800px;
+    height: 10vh;
+    min-height: 50px;
+    margin-top: 30px;
+    border: 1px solid black;
+}
+
+.box-2 {
+    outline-style: solid;
+    outline-color: blue;
+    outline-width: 5px;
+    outline-offset: 3px;
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    margin-left: 40px;
+    border: 4px solid black;
+}
+
+.box-3 {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    margin-left: 40px;
+    background-color: aqua;
+    border: 4px black;
+    border-width: 10px 5px 2px 4px;
+    border-style: solid dashed;
+    border-color: brown blueviolet green yellow;
+    border-radius: 10px 3px 4px 9px;
+}
+
+.box-4 {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+    margin-left: 40px;
+    padding: 30px;
+    background-color: rgba(192, 245, 2, 0.938);
+    border: solid black;
+    border-image-source: url("Imagens/1.png");
+    border-image-slice: 20;
+    border-image-width: 5%;
+    border-image-outset: 10px;
+    border-image-repeat: round;
+}
+
+.bg {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    margin-top: 30px;
+    margin-left: 40px;
+    background-image: url("Imagens/1.png");
+    background-repeat: repeat-y;
+    background-attachment: scroll;
+    background-position: right top;
+    background-size: 30px 30px;
+    border: solid black;
+}
+
+.op {
+    width: 100px;
+    height: 100px;
+    background-color: blueviolet;
+    border: 1px solid black;
+}
+
+.op:hover {
+    opacity: 0.5;
+}
+
+.text {
+    text-decoration-line: underline overline;
+    text-decoration-style: solid;
+    text-decoration-color: red;
+    width: 80vw;
+    height: 500px;
+    border: 1px solid black;
+    font-size: 30px;
+    color: green;
+    text-align: center;
+    text-align-last: right;
+    text-indent: 300px;
+    text-transform: uppercase;
+    text-shadow: 2px 2px black;
+}
+
+.font {
+    width: 80vw;
+    height: 200px;
+    border: 1px solid black;
+    font-size: 20px;
+    font-family: Arial;
+    font-style: italic;
+    font-variant: small-caps;
+    font-weight: bold;
+    line-height: 10px;
+    letter-spacing:10px;
+    word-spacing: 10px;
+    word-break:break-all;
+    tab-size: 20px;
+    white-space: wrap;
+}
+
+.list .ul-1 li {
+    font-size: 30px;
+    list-style-position: outside;
+    list-style-type: lower-roman;
+}
+
+.list .ul-2 li {
+    font-size: 30px;
+    list-style-position: inside;
+    list-style-image: url("Imagens/1.png");
+}
+
+.overflow {
+    overflow-y: scroll;
+    width: 300px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.column {
+    column-count: 3;
+    column-rule-width: 10px;
+    column-rule-color: red;
+    column-rule-style: dashed;
+    column-fill: auto;
+    column-gap: 10px;
+    width: 900px;
+    height: 100px;
+    border: 1px solid black;
+}
+.animation{
+    width: 100px;
+    height: 100px;
+    animation-name: teste;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-delay: 3s;
+    animation-iteration-count: 3;
+    animation-direction: reverse;
+    border: 1px solid black;
+}
+@keyframes teste {
+    from{
+        width: 100px;
+    }
+to{
+        width: 900px;
+    }
+}
+
+.transform{
+    transform-origin:100px 100px;
+    transform: rotate(30deg);
+    width: 100px;
+    height: 100px;
+    margin: 40px;
+    border: 1px solid black;
+}
+.transition{
+    width: 100px;
+    height: 100px;
+    margin: 40px;
+    transition-delay: 1s;
+    transition-timing-function:ease-in-out;
+    transition-duration:3s;
+    transition-property: width;
+    border: 1px solid black;
+}
+.transition:hover{
+    width: 300px;
+}
+
+.box-shadow{
+    box-shadow: 3px 5px black;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+}
+.box-sizing{
+    box-sizing: content-box;
+    width: 200px;
+    height: 200px;
+    margin: 100px;
+    padding: 100px;
+    border: 10px solid black;
+}
+.visibility{
+    width: 200px;
+    height: 200px;
+    border: 10px solid black;
+}
+.visibility:hover{
+    visibility: hidden;
+}
+
+.direction{
+    direction: rtl;
+    display: inline-block;
+    width: 600px;
+    height: 200px;
+    border: 1px solid black;
+}
+.itm-dir{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+.cursor{
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.resize{
+    resize:both;
+    display: block;
+    overflow: hidden;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+.table{
+    caption-side: bottom;
+    border-collapse: collapse;
+    table-layout: auto;
+    width: 100px;
+}
+.table caption{
+    border:1px solid black;
+    font-size: 20px;
+}
+.table tr td{
+    empty-cells: show;
+    width: 30px;
+    height: 20px;
+    border:1px solid black;
+}
+.align{
+    display: inline-block;
+    width: 400px;
+    height: 200px;
+    border: 1px solid black;
+}
+.itm-align{
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    border: 1px solid black;
+}
+.aln-1{
+    vertical-align: text-bottom;
+}
+.content{
+    quotes: "+" "+";
+}
+.content:before {
+    content: "(Content-antes)";
+}
+.content:after {
+    content: "(Content-depois)";
+}
+.quotes{
+    font-size: 30px;
+}
+.increment{
+    counter-reset: contador;
+}
+.increment .itm-increment:before{
+    content: counter(contador) "  ";
+    counter-increment: contador;
+}
+
+/* Outros */
+
+/* Cria uma animação */
+@keyframes nomeAnimacao {
+    from{    }
+    to{     }
+}  
+
+/* Efeito sera apica quando a tela respeitar a medida */
+@media screen and (max-width : 1024px){
+    
+}
+
+
+/* BEM */
+
+/* Bloco  */
+.menu{}
+
+/* Elemento */
+.menu__item{}
+
+/* Modificador */
+
+.menu__item--checked{}

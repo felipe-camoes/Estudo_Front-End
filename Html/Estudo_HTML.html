@@ -1,0 +1,239 @@
+<!DOCTYPE html><!--Utilizada para o navegador identificar o tipo de documento imagem-->
+<html lang="pt-br"><!--Tag para descrever onde será o codigo html-->
+<head><!--Cabeçalho da pagina , onde não sera exibida para o usuario apenas lida pelo navegador-->
+  <meta charset="UTF-8"><!--A tag meta define informações adicionais sobre a página, como a codificação de caracteres, palavras-chave para mecanismos de busca e descrição da página.-->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"><!--Utilizado para rodar no internet explorer-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--Define a viwport do navegador , area visivel da pagina , que sera de 100 %-->
+  <title>Titulo da pagina</title><!--Titulo da pagina-->
+  <link rel="stylesheet" href="style.css"><!--Link para css externo-->
+  <link rel="shortcut icon" href="Imagens/ico.ico" type="image/x-icon"><!--Insere uma Imagem .ico ao titulo da pagina-->
+</head>
+<body><!--Corpo da pagina , onde sera exibido para o usuario-->
+  <!-- Tags -->
+
+  <!--Textos-->
+
+  <hgroup><!--Agrupamento de titulos-->
+    <!--Titulos e seus pesos-->
+    <h1>Titulo 1</h1><br>
+    <h2>Titulo 2</h2><br>
+    <h3>Titulo 3</h3><br>
+    <h4>Titulo 4</h4><br>
+    <h5>Titulo 5</h5><br>
+    <h6>Titulo 6</h6><br>
+  </hgroup>
+  <p>Texto</p><!--Texto simples-->
+  <em>Texto</em><!--Texto em italico-->
+  <strong>Texto</strong><!--Texto em negrito-->
+  <mark>Texto</mark><!--Texto marcado-->
+  <del>Texto</del><!--Texto riscado-->
+  <ins>Texto</ins><!--Texto sublinhado-->
+  <abbr title="world war 2">ww2</abbr><!--Abreviação do texto-->
+  <br><!--Cria um espaçamento entre os elementos-->
+  <hr><!--Cria uma linha de espaçamento-->
+  <button type="button">BOTÃO</button><!--Tag para botão-->
+  <button><!--Botao com Imagem-->
+    <img src="Imagens/1.PNG">
+  </button>
+  <a href="https:\\google.com">Texto</a><!--Tag para link-->
+  <hr>
+
+  <!--Tags Semanticas-->
+
+  <main>main</main><!--Define o conteúdo principal da página, que pode ser dividido em várias seções e artigos.--><hr>
+  <section>Section</section><!--Define uma seção na pagina , dividindo em varias seções--><hr>
+  <article>Article</article><!--Define um conteúdo independente, como um post de blog ou uma notícia.--><hr>
+  <header>Header</header><!--Define o cabeçalho da página, geralmente com um logotipo e um menu de navegação.--><hr>
+  <nav>Nav</nav><!--Barra de navegaçã--><hr>
+  <aside>Aside</aside><!--Conteudo lateralizado que esta relacionado ao conteudo principal--><hr>
+  <div>Div</div><!--Bloco generico serve para todo tipo de divisão --><hr>
+  <span>Span</span><!--Bloco para marcar uma parte de texto ou um trecho de conteúdo que precisa ser diferenciado do restante do texto--><hr>
+  <address>Address</address><!--Bloco semantico para endereço-->
+  <q>citaçao</q><!-- cria uma citação no texto -->
+
+  <!--Midias-->
+
+  <source><!--Usado para buscar o arquivo de audio ou video-->
+  <audio src="Audio.mp3" controls></audio><!--Insere um audio , atributo controls cria um layout reprodutivel--><br>
+
+  <!--Insere audios de outros formatos para que o navegador escolha o compativel-->
+  <audio controls>
+    <source src="Audio.ogg" type="audio/ogg">
+    <!--Formato ogg-->
+    <source src="Audio.mpeg" type="audio/mpeg">
+    <!--Formato mpeg-->
+  </audio>
+  <hr>
+  <video src="Video.mp4" controls></video><!--Insere um video-->
+
+  <!--Insere videos de outros formatos para que o navegador escolha o compativel-->
+  <video controls>
+    <source src="video.mp4">
+  </video>
+  <hr>
+  <img src="Imagens/ico.ico" alt="Descrição da Imagem"><!--Inseri uma Imagem -->
+  <figure><!--Tag semantica para figura composto de Imagem e titulo-->
+    <img src="Imagens/ico.ico">
+    <figcaption>Texto</figcaption><!--Titulo da Figura-->
+  </figure>
+  <hr>
+
+  <!--Listas-->
+
+  <ol><!--Lista ordenada-->
+    <li>Texto 1</li> <!--Item da lista-->
+    <li>Texto 2</li>
+    <li>Texto 3</li>
+  </ol>
+  <hr>
+  <ul><!--Lista não ordenada-->
+    <li>Texto</li>
+    <li>Texto</li>
+    <li>Texto</li>
+  </ul>
+  <hr>
+
+  <!--Tabelas-->
+
+  <table border="1"><!--Tag semantica para tabela-->
+    <caption>Texto</caption><!--Titulo da tabela-->
+    <colgroup style="background-color: aqua;"><!--Serve para representar todas as colunas-->
+      <col style="background-color: rgb(0, 0, 0);"><!--Representa a coluna da tabela-->
+      <col style="background-color: rgb(255, 0, 0);">
+    </colgroup>
+    <thead><!--Tag semantica para a cabeça da tabela-->
+      <tr><!--Linha da tabela-->
+        <th>Titulo da coluna 1</th><!--Celula head da tabela-->
+        <th>Titulo da coluna 2 </th>
+      </tr>
+    </thead>
+    <tbody><!--Tag para o corpo da tabela-->
+      <tr>
+        <td>Coluna 1 da linha 1</td><!--Celula da tabela-->
+        <td>Coluna 2 da linha 1</td>
+      </tr>
+    </tbody>
+    <tfoot><!--Tag para o rodape da tabela-->
+      <tr>
+        <td>Coluna 1 da linha 2</td>
+        <td>Coluna 2 da linha 2</td>
+      </tr>
+    </tfoot>
+  </table>
+  <hr>
+
+  <!--Arquivos externos-->
+
+  <iframe src="Index.html"></iframe><!--Adiciona um arquivo externo a pagina-->
+
+  <!--Outras formas-->
+  <embed src="Index.html">
+  <object data="Index.html"></object>
+  <hr>
+
+  <!--Formularios-->
+
+  <form action="Paraondevai.formatodoservidor" method="get"><!--Insere um formulario , utilizando o metodo get para fazer o envio dos dados-->
+    <fieldset><!--Inseri um container no formulario-->
+      <legend>Texto</legend><!--Legenda do formulario-->
+      <label for="submit">Botao submitT</label><!--Tag semantica para rotular uma tag input-->
+      <input type="submit" value="ENVIA PARA O SERVIDOR" id="submit"><!--Envia os dados para o servidor ,diferente do button -->
+      <hr>
+      <label for="botao">Botao</label>
+      <input type="button" value="BOTAO" id="botao">
+      <hr>
+
+      <!--Seleciona apenas um elemento , o name deve ser igual para que seje do mesmo grupo-->
+      
+      <label for="masculino">Maculino</label>
+      <input type="radio" name="igual" id="masculino">
+
+      <label for="feminino">Feminino</label>
+      <input type="radio" name="igual" id="feminino">
+
+      <label for="outros">Outros</label>
+      <input type="radio" name="igual" id="outros">
+      <hr>
+
+      <label for="text">Texto</label>
+      <input type="text" id="text" placeholder="PALAVRA SUJESTIVA">
+      <hr>
+
+      <!--Selecionar opções , o name tem que ser igual para pertencer ao mesmo grupo-->
+      
+      <label for="checkbox">Checkbox</label>
+      <input type="checkbox" id="checkbox" name="igual2">
+
+      <label for="checkbox1">Checkbox1</label>
+      <input type="checkbox" id="checkbox1" name="igual2">
+
+      <label for="checkbox2">Checkbox2</label>
+      <input type="checkbox" id="checkbox2" name="igual2">
+
+    </fieldset>
+    <br>
+    <fieldset>
+      <legend>Titulo do segundo bloco</legend>
+      <label for="select-sexo">Select</label>
+      <select name="sexo" id="select-sexo">
+        <option value="VAZIO"></option>
+        <option value="Masculino">Masculino</option>
+        <option value="Feminino">Feminino</option>
+        <option value="Outro">Outro</option>
+      </select>
+      <hr>
+      
+      <!--Select com mais grupos-->
+      
+      <label for="select-sub">Select com subgrupos</label>
+      <select name="opçoes" id="select-sub">
+        <optgroup label="TITULO 1">
+          <!--Arupa os options-->
+          <option value="">Opçao 1 da opcao 1</option>
+          <option value="">Opcao 2 da opcao 1</option>
+        </optgroup>
+        <optgroup label="TITULO 2">
+          <option value="">Opçao 1 da opcao 2</option>
+          <option value="">Opcao 2 da opcao 2</option>
+        </optgroup>
+      </select>
+      <hr>
+      
+      <!--Cria um campo para comentarios-->
+      
+      <label for="comentarios">comentarios</label>
+      <textarea rows="8" cols="70" placeholder="DIGITE SEU TEXTO : " id="comentarios"></textarea>
+    </fieldset>
+  </form>
+  <hr>
+
+  <!-- Atributos -->
+
+  <a href="https:\\google.com">link</a><!--Link com referencia do google--><hr>
+  <a href="#" target="_blank">link</a><!-- Define em que frame o link sera aberto --><hr>
+  <img src="Imagens/1.PNG"><!-- Procura a imagem--><hr>
+  <img alt="Descrição"><!-- Descrição da imagen --><hr>
+  <p class="classe">classe</p><!--Cria uma classe para o elemento--> <hr>
+  <p id="id">id</p><!--Cria um id para o elemento--><hr>
+  <a href="mailto:felipeout343@gmail.com">email</a><!--Cria um link redirecionando para o e-mail--><hr>
+  <a href="tel:+11913686068">telefone</a><!--Cria um link redirecionando para o telefone--><hr>
+  <input type="text"><!-- Define o tipo de midia da tag script , style e input --><hr>
+  <input name="masculino"><!-- Define a referencia do input para identificação no formulario --><hr>
+  <input value="valor-inicial"><!-- Define um valor padrão caso nenhum valor seje inserido , usado no input e button --><hr>
+  <input required><!-- Define que o input deve ser obrigatorio --><hr>
+  <input autofocus><!-- Define onde a pagina ira focar ao carregar --><hr>
+  <div style="width: 100px"></div> <!-- Define um estilo para o elemento --><hr>
+  <input placeholder="Digite Aqui"> <!-- Define um  texto inicial no input , não sera carregado como value --><hr>
+  <option selected></option><!-- Define uma opção pre-selecionado --><hr>
+  <input checked><!-- Define uma opção checkbox pre-selecionado --><hr>
+  <div title="Texto"></div><!-- Cria um "Balão" ao passar o mouse pelo elemento , com o texto --><hr>
+  <input disabled><!-- Desabilita o input do formulario , usado para usario caso outro input seje usado --><hr>
+  <input readonly><!-- o input sera somente para leitura enviando o valor designado para o servidor --><hr>
+  <input autocomplete="on"></input><!-- Mostra opções para preencher no input --><hr>
+  <input min="1" max="5"><!-- Define o valor minimo e maximo para o numero ou data --><hr>
+  <input pattern="padrao"> <!-- Define um valor padrão para o campo do formulario -->
+  <div data-valor1="valor-criado"></div><!-- Define um novo atributo com o valor que desejar --><hr>
+  <div class="onclick" onclick="função()"></div> <!-- Adiciona um evento ao elemento --> 
+  
+</body>
+</html>

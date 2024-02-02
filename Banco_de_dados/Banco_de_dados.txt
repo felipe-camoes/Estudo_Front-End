@@ -1,0 +1,64 @@
+Armazena tabelas que contem linhas e colunas com dados
+-- chave primaria , os dados nao pode se repetir , pode ser definido
+-- chave estrangeira 
+-- indice , representa o indice da tabela
+
+// seleciona as colunas
+SELECT
+
+// DE ONDE SERA EXTRAIDO
+FROM
+
+// SELECIONA TODOS AS TABERLAS 
+*
+
+//omitir dados duplicados
+distinct
+
+// SELECIONA DADOS ESPECIFICIOS A PARTIR DE UMA CONDIÇÃO
+WHERE
+
+operadores
+=           : igual
+>           : MAIOR QUE 
+<           : MENOR QUE
+>=          : MAIOR QUE OU IGUAL
+<=          : MENOR QUE OU IGUAL
+<>          : DIFERENTE DE
+AND         : OPERADOR LOGICO E    
+OR          : OPERADOR LOGICO OU
+
+
+// numero de linhas da condicao
+count
+
+// limita a quantidade que apresentarao
+top
+
+// ORDENAR COLUNA
+ORDER BY
+asc ou desc
+
+// encontrar entre o valor minimo e maximo
+between
+
+// se o valor corresponde ao valor passado 
+IN ( 1,2,3)
+e o not
+
+//algo parecido com o paramentro
+like "palavra$%" "%palavra$%" "%palavra"
+underline para substituir o caracter
+
+// retorna o mimo valor , ou maixmo , a soma ew a media
+MIN 
+MAX
+AVG
+SUM
+
+//coloca o nome na coluna
+as
+
+
+// agrupa todos a partir da coluna , se tiver dois iguais ele agrupa todos da tabela , sendo necesaria uma funcao que fara essa agregacao como somar ou encontrar
+
